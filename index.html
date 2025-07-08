@@ -174,14 +174,187 @@
         </div>
     </section>
 
+    <!-- Data Platform Showcase -->
+    <section id="data-platform" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-8">Your Personal Performance Dashboard</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Track your progress with precision. Real-time analytics that show exactly how your body responds to training.
+                </p>
+            </div>
+            
+            <!-- Dashboard Mock-up -->
+            <div class="bg-gray-900 rounded-xl p-8 shadow-2xl">
+                <!-- Dashboard Header -->
+                <div class="flex items-center justify-between mb-8">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-white text-2xl font-bold">Performance Analytics</h3>
+                    </div>
+                    <div class="text-gray-400 text-sm">Week 8 Progress</div>
+                </div>
+                
+                <!-- Key Metrics Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <div class="text-gray-400 text-sm mb-2">Strength Index</div>
+                        <div class="text-3xl font-bold text-green-400 mb-2">+24%</div>
+                        <div class="text-gray-500 text-sm">vs. baseline</div>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <div class="text-gray-400 text-sm mb-2">Body Composition</div>
+                        <div class="text-3xl font-bold text-blue-400 mb-2">-12lbs</div>
+                        <div class="text-gray-500 text-sm">fat loss</div>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <div class="text-gray-400 text-sm mb-2">Recovery Score</div>
+                        <div class="text-3xl font-bold text-yellow-400 mb-2">87%</div>
+                        <div class="text-gray-500 text-sm">optimal</div>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <div class="text-gray-400 text-sm mb-2">Movement Quality</div>
+                        <div class="text-3xl font-bold text-purple-400 mb-2">92%</div>
+                        <div class="text-gray-500 text-sm">efficiency</div>
+                    </div>
+                </div>
+                
+                <!-- Progress Chart -->
+                <div class="bg-gray-800 rounded-lg p-6 mb-8">
+                    <h4 class="text-white text-lg font-semibold mb-4">8-Week Progress Trajectory</h4>
+                    <div class="relative h-48">
+                        <!-- Simulated Chart Background -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-700 to-transparent opacity-20 rounded"></div>
+                        
+                        <!-- Chart Lines (Visual representation) -->
+                        <svg viewBox="0 0 400 200" class="w-full h-full">
+                            <!-- Grid lines -->
+                            <defs>
+                                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#374151" stroke-width="1"/>
+                                </pattern>
+                            </defs>
+                            <rect width="100%" height="100%" fill="url(#grid)" />
+                            
+                            <!-- Strength Progress Line -->
+                            <polyline fill="none" stroke="#10b981" stroke-width="3" 
+                                      points="20,160 60,140 100,130 140,115 180,105 220,95 260,85 300,75 340,65 380,55" />
+                            
+                            <!-- Body Composition Line -->
+                            <polyline fill="none" stroke="#3b82f6" stroke-width="3" 
+                                      points="20,180 60,175 100,165 140,155 180,140 220,125 260,110 300,95 340,80 380,70" />
+                            
+                            <!-- Recovery Line -->
+                            <polyline fill="none" stroke="#f59e0b" stroke-width="3" 
+                                      points="20,140 60,135 100,145 140,130 180,125 220,120 260,115 300,110 340,105 380,100" />
+                        </svg>
+                        
+                        <!-- Legend -->
+                        <div class="absolute bottom-2 left-2 text-xs text-gray-400">
+                            <div class="flex items-center space-x-4">
+                                <div class="flex items-center">
+                                    <div class="w-3 h-0.5 bg-green-400 mr-1"></div>
+                                    <span>Strength</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-0.5 bg-blue-400 mr-1"></div>
+                                    <span>Body Comp</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-0.5 bg-yellow-400 mr-1"></div>
+                                    <span>Recovery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h4 class="text-white text-lg font-semibold mb-4">Recent Workouts</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300">Upper Body Power</span>
+                                <span class="text-green-400 font-semibold">+8% intensity</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300">Lower Body Strength</span>
+                                <span class="text-blue-400 font-semibold">PR achieved</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300">Metabolic Conditioning</span>
+                                <span class="text-yellow-400 font-semibold">On target</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h4 class="text-white text-lg font-semibold mb-4">Next Week Focus</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
+                                <span class="text-gray-300">Increase squat volume by 5%</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                                <span class="text-gray-300">Add sprint intervals</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                                <span class="text-gray-300">Focus on movement quality</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Features List -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Real-Time Analytics</h3>
+                    <p class="text-gray-600">Track strength, body composition, recovery, and movement quality with precision metrics.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Progress Visualization</h3>
+                    <p class="text-gray-600">See your improvements over time with detailed charts and trend analysis.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Smart Recommendations</h3>
+                    <p class="text-gray-600">Get personalized training adjustments based on your performance data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
     <section id="pricing" class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-6">
+        <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16">Pricing</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Tier -->
                 <div class="bg-white p-8 rounded-lg border border-gray-200">
-                    <h3 class="text-2xl font-bold mb-4">Coaching</h3>
-                    <div class="text-4xl font-bold mb-6">$50<span class="text-lg font-normal text-gray-600">/month</span></div>
+                    <h3 class="text-2xl font-bold mb-4">Basic</h3>
+                    <div class="text-4xl font-bold mb-6">$35<span class="text-lg font-normal text-gray-600">/month</span></div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center">
                             <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -201,32 +374,31 @@
                             </svg>
                             Remote check-ins
                         </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                            </svg>
-                            Dedicated data platform & analytics
-                        </li>
                     </ul>
-                    <div class="text-center">
-                        <span class="text-gray-500 text-sm">Contact for details</span>
-                    </div>
+                    <button class="w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
+                        Get Started
+                    </button>
                 </div>
-                <div class="bg-white p-8 rounded-lg border border-gray-200">
-                    <h3 class="text-2xl font-bold mb-4">Personal Training</h3>
-                    <div class="text-4xl font-bold mb-6">$100<span class="text-lg font-normal text-gray-600">/month</span></div>
+                
+                <!-- Pro Tier -->
+                <div class="bg-white p-8 rounded-lg border-2 border-blue-500 relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Pro</h3>
+                    <div class="text-4xl font-bold mb-6">$60<span class="text-lg font-normal text-gray-600">/month</span></div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center">
                             <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                             </svg>
-                            1-on-1 virtual sessions
+                            Everything in Basic
                         </li>
                         <li class="flex items-center">
                             <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                             </svg>
-                            Everything in Coaching
+                            Dedicated data platform & analytics
                         </li>
                         <li class="flex items-center">
                             <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -238,12 +410,47 @@
                             <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                             </svg>
-                            Dedicated data platform & analytics
+                            Bi-weekly progress reviews
                         </li>
                     </ul>
-                    <div class="text-center">
-                        <span class="text-gray-500 text-sm">Contact for details</span>
-                    </div>
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Elite Tier -->
+                <div class="bg-white p-8 rounded-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-4">Elite</h3>
+                    <div class="text-4xl font-bold mb-6">$120<span class="text-lg font-normal text-gray-600">/month</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Everything in Pro
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            1-on-1 virtual sessions
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Weekly progress reviews
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Direct messaging access
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
+                        Get Started
+                    </button>
                 </div>
             </div>
         </div>
