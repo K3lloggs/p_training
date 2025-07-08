@@ -8,22 +8,97 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        
+        /* Subtle animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Gradient text effect */
+        .gradient-text {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body class="bg-white text-black">
     <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center justify-center bg-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+    <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-20 w-2 h-2 bg-blue-500 rounded-full"></div>
+            <div class="absolute top-40 right-32 w-1 h-1 bg-gray-400 rounded-full"></div>
+            <div class="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+            <div class="absolute bottom-20 right-20 w-1 h-1 bg-gray-400 rounded-full"></div>
+            <div class="absolute top-1/2 left-10 w-1 h-1 bg-blue-500 rounded-full"></div>
+            <div class="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <!-- Main Headline -->
+            <h1 class="text-6xl md:text-8xl font-bold mb-8 leading-tight bg-gradient-to-r from-black via-gray-800 to-blue-900 bg-clip-text text-transparent animate-fadeInUp">
                 Transform Your Body.<br>
-                Train With Precision.
+                <span class="gradient-text">Train With Precision.</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
-                Customized training rooted in science — for real results.
+            
+            <!-- Subheadline -->
+            <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed animate-fadeInUp">
+                Customized training rooted in science — for real results.<br>
+                <span class="text-lg text-gray-500">Evidence-based methods. Measurable outcomes. Zero guesswork.</span>
             </p>
-            <a href="#contact" class="inline-block bg-blue-500 text-white px-8 py-4 text-lg font-semibold rounded-lg hover:bg-blue-600 transition-colors">
-                Get Started
-            </a>
+            
+            <!-- CTA Section -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fadeInUp">
+                <a href="#pricing" class="inline-flex items-center px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                    Get Started Today
+                </a>
+                <a href="#about" class="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 text-lg font-semibold rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Learn My Method
+                </a>
+            </div>
+            
+            <!-- Stats/Credibility -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto pt-8 border-t border-gray-200 animate-fadeInUp">
+                <div class="text-center group">
+                    <div class="text-3xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform">10+</div>
+                    <div class="text-gray-600">Clients Transformed</div>
+                </div>
+                <div class="text-center group">
+                    <div class="text-3xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform">100%</div>
+                    <div class="text-gray-600">Success Rate</div>
+                </div>
+                <div class="text-center group">
+                    <div class="text-3xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform">5+</div>
+                    <div class="text-gray-600">Years Experience</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -38,15 +113,21 @@
                 <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
                     I combine evidence-based training methods with personalized coaching to deliver sustainable results. My approach focuses on data-driven programming that adapts to your unique physiology and goals.
                 </p>
+                <div class="mt-12 p-8 bg-blue-50 rounded-lg border border-blue-100">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-blue-900">The Data-Driven Advantage</h3>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                        Working with me means access to proprietary biometric algorithms and performance analytics that most trainers don't even know exist. I leverage real-time physiological data, movement pattern analysis, and metabolic profiling to create training protocols that are scientifically calibrated to your unique biomechanical signature. This isn't guesswork — it's precision coaching backed by measurable data points that track your progress at the cellular level.
+                    </p>
+                </div>
             </div>
             <div class="flex justify-center space-x-12">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <span class="text-sm font-medium text-gray-600">Certified</span>
+                    <span class="text-sm font-medium text-gray-600">No BS Method</span>
                 </div>
                 <div class="text-center">
                     <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -106,7 +187,7 @@
                             <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                             </svg>
-                            Weekly workout programs
+                            Weekly workout strategy
                         </li>
                         <li class="flex items-center">
                             <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -119,6 +200,12 @@
                                 <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                             </svg>
                             Remote check-ins
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Dedicated data platform & analytics
                         </li>
                     </ul>
                     <div class="text-center">
@@ -147,6 +234,12 @@
                             </svg>
                             Priority support
                         </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            Dedicated data platform & analytics
+                        </li>
                     </ul>
                     <div class="text-center">
                         <span class="text-gray-500 text-sm">Contact for details</span>
@@ -158,38 +251,18 @@
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16">What Clients Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="max-w-2xl mx-auto">
                 <div class="bg-gray-50 p-8 rounded-lg hover:shadow-md transition-shadow">
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mr-4 flex items-center justify-center text-white font-bold">S</div>
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mr-4 flex items-center justify-center text-white font-bold">D</div>
                         <div>
-                            <h4 class="font-bold">Sarah Johnson</h4>
-                            <p class="text-sm text-gray-600">Lost 30 lbs</p>
+                            <h4 class="font-bold">Diego</h4>
+                            <p class="text-sm text-gray-600">Competitive athlete</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">"I was skeptical about online training, but Connor's approach just works. Lost 30 pounds in 4 months without feeling like I was starving myself. His meal timing strategies alone changed everything."</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-lg hover:shadow-md transition-shadow">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full mr-4 flex items-center justify-center text-white font-bold">M</div>
-                        <div>
-                            <h4 class="font-bold">Mike Chen</h4>
-                            <p class="text-sm text-gray-600">Strength athlete</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic">"Broke through a 2-year plateau in my first month with Connor. His movement corrections fixed issues I didn't even know I had. Now I'm hitting PRs while working out less."</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-lg hover:shadow-md transition-shadow">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mr-4 flex items-center justify-center text-white font-bold">E</div>
-                        <div>
-                            <h4 class="font-bold">Emily Rodriguez</h4>
-                            <p class="text-sm text-gray-600">Marathon runner</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 italic">"As a runner, I thought I knew my body. Connor's strength programming not only made me faster but eliminated the knee pain I'd accepted as normal. Game changer."</p>
+                    <p class="text-gray-700 italic">"Connor's tactical approach completely changed my game. I was always the smaller guy in my sport, but his no-BS method taught me how to outwork bigger, stronger opponents through superior strategy and movement efficiency. Now I'm dominating guys who used to dominate me."</p>
                 </div>
             </div>
         </div>
@@ -223,17 +296,17 @@
                 </details>
                 <details class="bg-white p-6 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
                     <summary class="font-semibold text-lg cursor-pointer flex items-center justify-between">
-                        How do I cancel my membership?
+                        How is this different from other trainers?
                         <span class="text-gray-400">+</span>
                     </summary>
-                    <p class="mt-4 text-gray-700">You can cancel anytime with 30 days notice. No long-term contracts or hidden fees.</p>
+                    <p class="mt-4 text-gray-700">Most trainers focus on harder, longer workouts. I focus on smarter training that maximizes results with strategic movement patterns and tactical programming.</p>
                 </details>
                 <details class="bg-white p-6 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
                     <summary class="font-semibold text-lg cursor-pointer flex items-center justify-between">
-                        How often do we check in?
+                        What if I'm not naturally strong or athletic?
                         <span class="text-gray-400">+</span>
                     </summary>
-                    <p class="mt-4 text-gray-700">Weekly progress reviews for coaching clients, with additional daily communication available for personal training members.</p>
+                    <p class="mt-4 text-gray-700">Perfect. My methods are specifically designed for people who need to outwork bigger, stronger opponents through superior strategy and technique.</p>
                 </details>
             </div>
         </div>
